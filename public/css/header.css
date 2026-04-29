@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #00d4ff;
+    --dark-color: #1a1f2e;
+}
+
+/* Combined Navbar */
+.navbar-custom {
+    background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-custom .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-color) !important;
+    margin-right: 40px;
+}
+
+.navbar-custom .navbar-brand img {
+    height: 70px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.navbar-custom .navbar-brand .logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.navbar-custom .navbar-brand span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.navbar-custom .navbar-brand .brand-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand .brand-tagline {
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.navbar-custom .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+    padding: 8px 16px !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(13, 110, 253, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--primary-color) !important;
+    background: linear-gradient(90deg, rgba(13, 110, 253, 0.15) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+    padding: 5px 10px;
+}
+
+.navbar-custom .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-custom .navbar-brand {
+        margin-right: 10px;
+    }
+
+    .navbar-custom .navbar-brand .brand-tagline {
+        display: none;
+    }
+
+    .navbar-custom .nav-link {
+        padding: 10px 12px !important;
+        margin: 5px 0;
+    }
+}
+
+/* Footer */
+.footer-custom {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2c3e50 100%);
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-custom h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.footer-custom .footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-custom .footer-logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.footer-custom p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.footer-custom ul {
+    list-style: none;
+}
+
+.footer-custom ul li {
+    margin-bottom: 10px;
+}
+
+.footer-custom ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-custom ul li a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-custom .contact-info {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-custom .contact-info i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
