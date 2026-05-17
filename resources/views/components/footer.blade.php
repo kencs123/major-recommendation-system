@@ -16,6 +16,7 @@
                     <li><a href="{{ route('home') }}"><i class="bi bi-chevron-right"></i> Home</a></li>
                     <li><a href="{{ route('videos') }}"><i class="bi bi-chevron-right"></i> Videos</a></li>
                     <li><a href="{{ route('recommendation') }}"><i class="bi bi-chevron-right"></i> Start Quiz</a></li>
+                    <li><a href="{{ route('admin.login') }}"><i class="bi bi-chevron-right"></i> Super Admin Login</a></li>
                 </ul>
             </div>
             

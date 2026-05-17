@@ -12,7 +12,7 @@ Route::get('/videos', function () {
     return view('pages.videos');
 })->name('videos');
 
-Route::get('/recommendation', [RecommendationController::class, 'index'])->name('recommendation');
+Route::match(['get', 'post'], '/recommendation', [RecommendationController::class, 'index'])->name('recommendation');
 Route::post('/recommendation/submit', [RecommendationController::class, 'submit'])->name('recommendation.submit');
 
 Route::middleware('guest:admin')->group(function () {

@@ -10,8 +10,10 @@
             <div class="card shadow-lg border-0">
                 <div class="card-body p-5">
                     <div class="text-center mb-4">
-                        <h2 class="fw-bold">🎓 Admin Panel</h2>
-                        <p class="text-muted">Welcome Back</p>
+                        <img src="{{ asset('images/logo.png') }}" alt="Petra Logo">
+                        <hr class="my-4">
+                        <h3 class="fw-bold">Login Super Admin Petra Apps</h3>
+                        {{-- <p class="text-muted">Welcome Back</p> --}}
                     </div>
 
                     @if ($errors->any())

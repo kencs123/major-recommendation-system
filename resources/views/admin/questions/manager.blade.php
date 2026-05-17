@@ -113,7 +113,32 @@
 </div>
 
 <!-- Pagination -->
-<div class="d-flex justify-content-center mt-4">
-    {{ $questions->links() }}
-</div>
+@if($questions->hasPages())
+    <div class="d-flex justify-content-between align-items-center mt-4">
+        <small class="text-muted">
+            Showing {{ $questions->firstItem() }}–{{ $questions->lastItem() }} of {{ $questions->total() }} questions
+        </small>
+        <div class="d-flex gap-2">
+            @if($questions->onFirstPage())
+                <button class="btn btn-sm btn-outline-secondary" disabled>
+                    <i class="bi bi-arrow-left"></i> Previous
+                </button>
+            @else
+                <a href="{{ $questions->previousPageUrl() }}" class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Previous
+                </a>
+            @endif
+
+            @if($questions->hasMorePages())
+                <a href="{{ $questions->nextPageUrl() }}" class="btn btn-sm btn-primary">
+                    Next <i class="bi bi-arrow-right"></i>
+                </a>
+            @else
+                <button class="btn btn-sm btn-primary" disabled>
+                    Next <i class="bi bi-arrow-right"></i>
+                </button>
+            @endif
+        </div>
+    </div>
+@endif
 @endsection
