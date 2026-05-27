@@ -37,5 +37,10 @@ class MajorSeeder extends Seeder
             'description' => 'Learn about software',
             'idx' => 1
         ]);
+        Major::create([
+            'name' => 'Enterprise Information System',
+            'description' => 'Learn about EIS',
+            'idx' => 1
+        ]);
     }
 }

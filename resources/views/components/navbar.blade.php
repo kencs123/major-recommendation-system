@@ -19,11 +19,13 @@
                         <i class="bi bi-house-door"></i> Home
                     </a>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link @if(request()->routeIs('videos')) active @endif" href="{{ route('videos') }}">
+                    <a class="nav-link @if(request()->routeIs('videos*')) active @endif" href="{{ route('videos') }}">
                         <i class="bi bi-play-circle"></i> Videos
                     </a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link @if(request()->routeIs('recommendation')) active @endif" href="{{ route('recommendation') }}">
                         <i class="bi bi-compass"></i> Start Quiz

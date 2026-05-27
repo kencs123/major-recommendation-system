@@ -6,7 +6,8 @@
     <title>@yield('title') - Major Recommendation System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.min.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     @stack('styles')
 </head>

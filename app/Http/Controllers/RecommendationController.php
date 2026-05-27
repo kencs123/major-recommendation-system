@@ -15,6 +15,7 @@ class RecommendationController extends Controller
 
    public function index(Request $request)
     {
+        $studentName = $request->session()->get('quiz.student_name', '');
         if ($request->isMethod('post')) {
             if ($request->filled('student_name')) {
                 $request->session()->put('quiz.student_name', $request->input('student_name'));
@@ -57,9 +58,15 @@ class RecommendationController extends Controller
         $request->session()->put('quiz.answers', $incoming + $saved);
     }
 
+    // fill the student name to sessions
+    if ($request->filled('student_name')) {
+        $request->session()->put('quiz.student_name', $request->input('student_name'));
+    }
+
     // Read complete data from session
     $answers     = $request->session()->get('quiz.answers', []);
     $studentName = $request->session()->get('quiz.student_name', '');
+    // dd($request->input());
 
     // session expired or incomplete (too make sure answers are existed)
     if (empty($answers) || empty($studentName)) {

@@ -2,15 +2,16 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/videos', function () {
-    return view('pages.videos');
-})->name('videos');
+// Route::get('/videos', [VideoController::class, 'index'])->name('videos');
+Route::get('/videos', [VideoController::class, 'index'])->name('videos');
+Route::get('/videos/{majorKey}', [VideoController::class, 'index'])->name('videos.major');
 
 Route::match(['get', 'post'], '/recommendation', [RecommendationController::class, 'index'])->name('recommendation');
 Route::post('/recommendation/submit', [RecommendationController::class, 'submit'])->name('recommendation.submit');
