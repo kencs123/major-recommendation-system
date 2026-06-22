@@ -12,6 +12,9 @@ Route::get('/', function () {
 // Route::get('/videos', [VideoController::class, 'index'])->name('videos');
 Route::get('/videos', [VideoController::class, 'index'])->name('videos');
 Route::get('/videos/{majorKey}', [VideoController::class, 'index'])->name('videos.major');
+Route::get('/videos/stream/{filename}', [VideoController::class, 'stream'])
+    ->name('videos.stream')
+    ->where('filename', '[a-zA-Z0-9_\-\.]+'); // whitelist safe filenames
 
 Route::match(['get', 'post'], '/recommendation', [RecommendationController::class, 'index'])->name('recommendation');
 Route::post('/recommendation/submit', [RecommendationController::class, 'submit'])->name('recommendation.submit');
